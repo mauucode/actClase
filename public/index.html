@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Biblioteca API</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>📚 Mi Biblioteca Web</h1>
+            <p>Gestión de libros con Express.js</p>
+        </header>
+        
+        <main>
+            <section class="form-section">
+                <h2>Agregar / Editar</h2>
+                <form id="bookForm">
+                    <input type="hidden" id="bookId">
+                    <div class="input-group">
+                        <label for="titulo">Título del libro</label>
+                        <input type="text" id="titulo" placeholder="Ej. El Principito" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="autor">Autor</label>
+                        <input type="text" id="autor" placeholder="Ej. Antoine de Saint-Exupéry" required>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" id="submitBtn" class="btn-primary">✨ Guardar Libro</button>
+                        <button type="button" id="cancelBtn" class="btn-secondary hidden">Cancelar</button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="list-section">
+                <h2>Lista de Libros</h2>
+                <div class="table-container">
+                    <ul id="bookList" class="book-list">
+                        </ul>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
